@@ -31,8 +31,12 @@ echo "gpu_mem=16" | sudo tee -a /boot/config.txt
 sudo sed -i 's/raspberrypi/tinfoil/g' /etc/hosts
 sudo sed -i 's/raspberrypi/tinfoil/g' /etc/hostname
 
-# Diable avahi
+# Diable uneeded services
 sudo systemctl disable avahi-daemon.service
+sudo systemctl disable bluetooth.service
+sudo systemctl disable bus-org.bluez.service
+sudo systemctl disable dbus-org.freedesktop.Avahi.service
+
 
 # SSH
 echo "PasswordAuthentication no" | sudo tee -a /etc/ssh/sshd_config
