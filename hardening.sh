@@ -43,5 +43,5 @@ echo "PasswordAuthentication no" | sudo tee -a /etc/ssh/sshd_config
 sudo sed -i -e 's/PermitRootLogin.*/PermitRootLogin no/' '/etc/ssh/sshd_config'
 
 # Configure unattended-upgrades
-sudo apt-get install unattended-upgrades
+sudo apt-get -y install unattended-upgrades
 sudo dpkg-reconfigure -plow unattended-upgrades
