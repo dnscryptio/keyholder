@@ -4,6 +4,9 @@
 sudo apt-get update
 sudo apt-get -y upgrade
 
+# Install RNG tools
+sudo apt-get -y install rng-tools
+
 # Add new users
 sudo useradd egon -s /bin/bash -m -G adm,sudo
 sudo useradd simon -s /bin/bash -m -G adm,sudo
