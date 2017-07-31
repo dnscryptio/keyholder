@@ -2,7 +2,7 @@
 
 # Update packages
 sudo apt-get update
-sudp apt-get -y upgrade
+sudo apt-get -y upgrade
 
 # Add new users
 sudo useradd egon -s /bin/bash -m -G adm,sudo
@@ -21,8 +21,8 @@ sudo echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDOQ7PNf73W/SlbtsONHFESlDoWWug9q
 sudo echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDf10JOCaGYdFJ7yjDzyYnTUWbg1ytbnQpZq3pcR+ZnUO5Wb4Im1op0ecjOdDw/Qa1Y4LZDvzw5J7j25cQuAl88YxILfv2qxPsDsnv1vWLFsMCyCumn6cnOLB5qbFByiuOHp3J8Ug66ZEsSVZWGHSOk/SdCJPzlCgVsJrDDOjJe8PGNrH8mFnyTg6W7CYzBnTxUyu5gejx4+P8fDtLHs2frCQ9eNk3SJvBbB9MgFrCNCdLqBPeL+XB5+qiR7iNgVzZiYsHIXrRpOF4GKzdDAdu3VHEEwHCdvYbkdLTEfDfhlCaw9jD8vyU0Q4ZQYu6/RfweYCLryo+GRDbAMTZ+dUzD simon@client" >> /home/simon/.ssh/authorized_keys
 
 # Delete pi user
-sudo userdel pi
-sudo rm -rf /home/pi
+sudo userdel -rf pi
+sudo rm /etc/sudoers.d/010_pi-nopasswd
 
 # Lower allocation to GPU
 echo "gpu_mem=16" | sudo tee -a /boot/config.txt
