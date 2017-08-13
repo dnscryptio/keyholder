@@ -27,7 +27,7 @@ sudo echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDf10JOCaGYdFJ7yjDzyYnTUWbg1ytbn
 sudo chown egon /home/egon/.ssh/authorized_keys
 sudo chown simon /home/simon/.ssh/authorized_keys
 
-# Delete pi user
+# Disable pi user and remove specific entry in sudo config
 sudo chsh -s /usr/sbin/nologin pi
 sudo rm /etc/sudoers.d/010_pi-nopasswd
 
@@ -35,7 +35,7 @@ sudo rm /etc/sudoers.d/010_pi-nopasswd
 echo "gpu_mem=16" | sudo tee -a /boot/config.txt
 
 # Change hostname
-sudo sed -i 's/raspberrypi/clavis/g' /etc/hosts
+sudo sed -i 's/raspberrypi/clavis/g' /etc/host
 sudo sed -i 's/raspberrypi/clavis/g' /etc/hostname
 
 # Diable uneeded services
