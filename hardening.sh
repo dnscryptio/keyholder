@@ -35,8 +35,8 @@ sudo rm /etc/sudoers.d/010_pi-nopasswd
 echo "gpu_mem=16" | sudo tee -a /boot/config.txt
 
 # Change hostname
-sudo sed -i 's/raspberrypi/tinfoil/g' /etc/hosts
-sudo sed -i 's/raspberrypi/tinfoil/g' /etc/hostname
+sudo sed -i 's/raspberrypi/clavis/g' /etc/hosts
+sudo sed -i 's/raspberrypi/clavis/g' /etc/hostname
 
 # Diable uneeded services
 sudo systemctl disable avahi-daemon.service
