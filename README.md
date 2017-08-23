@@ -11,6 +11,7 @@ Log in to the newly installed pi (or write to the mounted SD card):
 
 Connect via SSH with default credentials
 
+1. Clone this repo: `git clone https://github.com/dnscryptio/keyholder`
 1. Run: `hardening.sh`
 1. Run: `install_wrapper.sh`
 1. Run: `setup_enc_volume.sh`
