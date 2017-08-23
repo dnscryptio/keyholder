@@ -4,7 +4,7 @@ This repo contains notes and script for setting up and using the keyholder box.
 This is currently based on a Raspberry Pi.
 
 # Initial setup
-Log in to the newly installed pi:
+Log in to the newly installed pi (or write to the mounted SD card):
 
 1. Enable ssh: `sudo touch /boot/ssh`
 1. Reboot
