@@ -44,6 +44,11 @@ sudo systemctl disable bluetooth.service
 sudo systemctl disable bus-org.bluez.service
 sudo systemctl disable dbus-org.freedesktop.Avahi.service
 
+# Disable swap
+sudo update-rc.d -f dphys-swapfile remove
+sudo swapoff /var/swap
+sudo rm /var/swap
+
 # SSH
 echo "PasswordAuthentication no" | sudo tee -a /etc/ssh/sshd_config
 sudo sed -i -e 's/PermitRootLogin.*/PermitRootLogin no/' '/etc/ssh/sshd_config'
