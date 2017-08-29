@@ -38,7 +38,7 @@ echo "gpu_mem=16" | sudo tee -a /boot/config.txt
 sudo sed -i 's/raspberrypi/clavis/g' /etc/host
 sudo sed -i 's/raspberrypi/clavis/g' /etc/hostname
 
-# Diable uneeded services
+# Disable uneeded services
 sudo systemctl disable avahi-daemon.service
 sudo systemctl disable bluetooth.service
 sudo systemctl disable bus-org.bluez.service
